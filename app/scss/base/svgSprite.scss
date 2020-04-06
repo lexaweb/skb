@@ -1,0 +1,101 @@
+.svg-icon {
+    font-size: 10px;
+}
+
+.svg-icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../images/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 24.7em 21.8em;
+}
+
+.no-svg .svg-icon:before {
+    background-image: url("../images/sprite.png");
+}
+
+
+
+  .svg-icon.svg-arrow:before {
+      background-position: 0em 0em;
+      width: 1.1em;
+      height: 1.8em;
+  }
+
+
+
+
+  .svg-icon.svg-logo:before {
+      background-position: 0em -1.8em;
+      width: 24.7em;
+      height: 4em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-1:before {
+      background-position: 0em -5.8em;
+      width: 8.5em;
+      height: 2.7em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-2:before {
+      background-position: 0em -8.5em;
+      width: 5.2em;
+      height: 2.7em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-3:before {
+      background-position: 0em -11.2em;
+      width: 5.1em;
+      height: 2em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-4:before {
+      background-position: 0em -13.2em;
+      width: 7.1em;
+      height: 2.5em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-5:before {
+      background-position: 0em -15.7em;
+      width: 5.6em;
+      height: 1.5em;
+  }
+
+
+
+
+  .svg-icon.svg-payment-system-6:before {
+      background-position: 0em -17.2em;
+      width: 9.7em;
+      height: 2.7em;
+  }
+
+
+
+
+  .svg-icon.svg-question-mark:before {
+      background-position: 0em -19.9em;
+      width: 1.9em;
+      height: 1.9em;
+  }
+
+
+
+
+
