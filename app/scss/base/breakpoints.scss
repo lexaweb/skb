@@ -1,0 +1,398 @@
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/fancybox/dist/scss/jquery.fancybox";
+@import "../../node_modules/normalize.css/normalize";
+@import "base/fonts";
+@import "base/variables";
+@import "base/pngSprite";
+@import "base/svgSprite";
+@import "base/default";
+ 
+
+@include screen("lg", "max") {
+    .inner {
+
+        .transfer-form { 
+            width: 90%;
+
+            .where-from {
+                padding: 13px 25px;
+
+                p {
+                    font: 500 24px/35.83px Gilroy;
+                }
+
+                div {
+                    margin-top: 15px;
+                }
+            }
+
+            .where {
+                padding: 13px 25px;
+
+                p {
+                    font: 500 24px/35.83px Gilroy;
+                }
+
+                div {
+                    margin-top: 15px;
+                }
+
+                .sum { 
+                    span {
+                        font: 400 12px Gilroy;
+                    }
+                    
+                }
+            }
+        }
+
+        .block-gray {
+            bottom: -12%;
+        }
+
+
+        .block-gray {
+
+            .image-bortich-and-fat {
+                display: none;
+            }
+        }
+
+        .result {
+
+            .transfer {
+                .offer {
+                    display: grid;
+                    grid-template-columns: 10% 90%;
+                    grid-column-gap: 20px;
+                    width: 100%;
+                }
+            }
+            
+    }
+}
+
+}
+
+@include screen("md", "max") {
+
+    .inner  {
+
+        .zagolovok {
+            h1 {
+                font: 700 42px/52.45px Gilroy;
+            }
+            p {
+                font: 400 15px/21px Gilroy;
+            }
+        }
+
+        .transfer-form {
+            width: 70%;
+            flex-wrap: wrap;
+    
+            .where-from {
+                width: 100%;
+                margin-bottom: 25px;
+
+                padding: 33px 25px;
+
+                p {
+                    font: 500 24px/57.83px Gilroy;
+                }
+
+                div {
+                    margin-top: 25px;
+                }
+            }
+    
+            .svg-arrow {
+                justify-content: center;
+                transform: rotate(90deg);
+                width: 100%;
+                z-index: -1;
+            }
+    
+            .where {
+                margin-top: 25px;
+                width: 100%;
+
+                padding: 33px 25px;
+
+                p {
+                    font: 500 24px/57.83px Gilroy;
+                }
+
+                div {
+                    margin-top: 25px;
+                }
+
+                .sum { 
+                    span {
+                        font: 400 14px Gilroy;
+                    }
+                    
+                }
+            }
+        }
+
+        
+    .block-gray {
+        bottom: -6%;
+    }
+      
+    }
+
+    .payment-system {
+
+        width: 70%;
+    }
+
+    .tabs {
+
+        .tabs__nav {
+            width: 90%;
+        }
+    }
+    
+}
+
+@include screen("sm", "max") {
+   
+    header {
+        width: 95%;
+        margin: 15px auto;
+        .logo {
+            a {
+                i {
+                    font-size: 5px;
+                }
+            }
+        }
+        
+        .phone {
+            a {
+                font: 500 22px/30px Gilroy;
+
+                p {
+                    font: 400 11px Gilroy;
+                }
+            }
+        }
+    }
+
+ .inner {
+     margin-bottom: 100px;
+     .zagolovok {
+        width: 85%;
+        margin: 35px auto;
+
+        h1 {
+            font: 700 35px/46.45px Gilroy;
+        }
+
+        p {
+            margin-top: 20px;
+            font: 400 13px/18px Gilroy;
+        }
+     }
+
+     .transfer-form { 
+        width: 90%;
+
+        .where-from {
+            padding: 13px 25px;
+
+            p {
+                font: 500 24px/35.83px Gilroy;
+            }
+
+            div {
+                margin-top: 15px;
+            }
+        }
+
+        .where {
+            padding: 13px 25px;
+
+            p {
+                font: 500 24px/35.83px Gilroy;
+            }
+
+            div {
+                margin-top: 15px;
+            }
+
+            .sum { 
+                span {
+                    font: 400 12px Gilroy;
+                }
+                
+            }
+        }
+
+        
+        }
+
+        .result {
+        width: 85%;
+        flex-wrap: wrap;
+        .information-about-enrollment {
+            width: 100%;
+            h2 {
+                font: 700 14px/23px Gilroy;
+            }
+
+            p {
+                font: 400 14px/20px Gilroy;
+            }
+
+        }
+
+        .transfer {
+            width: 100%;
+            margin-top: 40px;
+            span {
+                font: 400 14px Gilroy;
+            }
+
+            .offer {
+                grid-column-gap: 0;
+                .text {
+                    font: 400 12px Gilroy;
+                }
+            }
+
+            .translate {
+                font: 400 14px/40px Gilroy;
+                padding: 0 40px;
+            }
+        }
+    }
+
+    .block-gray {
+        bottom: -6%;
+        height: 519px;
+    }
+ }
+
+
+ .payment-system {
+
+    width: 80%;
+    margin-bottom: 45px;
+    i {
+        font-size: 8px;
+    }
+}
+
+.tabs {  
+    .tabs__nav {
+        width: 95%;
+    }
+    .tabs__link {
+        font: 400 15px Gilroy;
+        padding-bottom: 15px;
+        margin-right: 20px;
+    }
+    
+    .tabs__content {
+        width: 90%;
+        font: 400 14px/32px Gilroy;
+    }
+
+}
+
+footer {
+    .footer-inner {
+        width: 95%;
+
+        .copyright {
+            font: 300 10px/15px Gilroy;
+            margin-right: 20px;
+        }
+
+        .phone { 
+            a {
+                font: 500 22px/30px Gilroy;
+
+                p {
+                    font: 400 11px Gilroy;
+                }
+            }
+
+        }
+    }
+}
+
+}
+
+@include screen("xs", "max") {
+
+   .inner {
+       .zagolovok {
+           width: 90%;
+       }
+
+       .transfer-form {
+
+        .where-from {
+            input {
+                height: 39px;
+            }
+
+            p {
+                font: 500 20px/35.83px Gilroy;
+            }
+        }
+
+        .where {
+            input {
+                height: 39px;
+            }
+
+            p {
+                font: 500 20px/35.83px Gilroy;
+            }
+
+            .sum {
+
+                span {
+                    font: 400 10px Gilroy;
+                }
+                label {
+                    span {
+                        font: 400 20px Gilroy;
+                    }
+                }
+            }
+        }
+  
+    }
+
+    .result {
+        .transfer {
+            .offer {
+                grid-column-gap: 10px;
+            }
+        }
+     
+    }
+   }
+
+
+   .payment-system i {
+    font-size: 6px;
+}
+
+.tabs { 
+    .tabs__link {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+}
+}
+
+
+@import "base/mixins";
