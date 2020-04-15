@@ -11,6 +11,10 @@
 // header
 
 header {
+    .inner {
+        width: 85%;
+        margin: 25px auto;
+    
     width: 85%;
     margin: 25px auto;
     display: flex;
@@ -40,18 +44,49 @@ header {
         }
     }
 }
+}
 
 // header
 
 // page
 
-.inner {
+.main {
     width: 85%;
     margin: 0 auto;
     position: relative;
     margin-bottom: 120px;
-    .zagolovok {
-        width: 75%;
+
+    form {
+        position: relative;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 419px;
+            border-radius: 8px;
+            background-color: #f2f2f2;
+            position: absolute;
+            bottom: -7%;
+            right: 0;
+            z-index: -1;
+
+        }
+
+        &:after {
+            content: '';
+            background-image: url('../images/bortich-and-fat.svg');
+            background-size: cover;
+            position: absolute;
+            bottom: -7%;
+            right: 0;
+            width: 229px;
+            height: 232px;
+            border-radius: 8px;
+            z-index: -1;
+                }
+       
+    }
+    .warning {
+        width: 58%;
         margin: 70px auto;
 
         h1 {
@@ -70,7 +105,8 @@ header {
     .transfer-form {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        flex-wrap: wrap;
+        width: 70%;
         margin: 0 auto;
         .where-from {
             padding: 33px 25px;
@@ -201,13 +237,13 @@ header {
     }
 
     .result {
-        width: 75%;
+        width: 95%;
         margin: 40px auto;
         display: flex;
         justify-content: space-between;
 
         .information-about-enrollment {
-            width: 45%;
+            width: 40%;
 
             h2 {
                 font: 700 16px/32px Gilroy;
@@ -222,7 +258,7 @@ header {
         }
 
         .transfer {
-            width: 40%;
+            width: 44%;
 
             span {
                 display: block;
@@ -309,33 +345,33 @@ header {
         }
     }
 
-    .block-gray {
-        width: 100%;
-        height: 419px;
-        border-radius: 8px;
-        background-color: #f2f2f2;
-        position: absolute;
-        bottom: -7%;
-        right: 0;
-        z-index: -1;
-        .image-bortich-and-fat {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            &:after {
-                content: '';
-                background-image: url('../images/bortich-and-fat.svg');
-                background-size: cover;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 229px;
-                height: 232px;
-                border-radius: 8px;
-            }
-        }
+    // .block-gray {
+    //     width: 100%;
+    //     height: 419px;
+    //     border-radius: 8px;
+    //     background-color: #f2f2f2;
+    //     position: absolute;
+    //     bottom: -7%;
+    //     right: 0;
+    //     z-index: -1;
+    //     .image-bortich-and-fat {
+    //         position: absolute;
+    //         bottom: 0;
+    //         right: 0;
+    //         &:after {
+    //             content: '';
+    //             background-image: url('../images/bortich-and-fat.svg');
+    //             background-size: cover;
+    //             position: absolute;
+    //             bottom: 0;
+    //             right: 0;
+    //             width: 229px;
+    //             height: 232px;
+    //             border-radius: 8px;
+    //         }
+    //     }
        
-    }
+    // }
 }
 
 .payment-system {
@@ -350,54 +386,62 @@ header {
   .tabs {
     min-height: 240px;
 
-    .line {
-        background-color: rgba(0, 0, 0, .15);
-        height: 1px;
-    }
-
   .tabs__nav {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
-  }
-
-  .tabs__link {
-    color: #262626;
-    font: 400 20px Gilroy;
-    padding-bottom: 22px;
-    margin-right: 40px;
     position: relative;
-    &:after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 5px;
-        background-color: transparent;
-        bottom: -1px;
-        right: 0;
-        opacity: 0;
-        transition: all 0.2s;
-  }
-  }
-
-  .tabs__link_active {
-    cursor: default;
-    position: relative;
-
-    &:after {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 5px;
-        background-color: #038c73;
-        bottom: -1px;
-        right: 0;
-        opacity: 1;
-        transition: all 0.2s;
-  }
    
+    &:before {
+        content: '';
+        background-color: rgba(0,0,0,.15);
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: -2px;
+    }
+
+    .tabs__link {
+        color: #262626;
+        font: 400 20px Gilroy;
+        padding-bottom: 22px;
+        margin-right: 40px;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 5px;
+            background-color: transparent;
+            bottom: -1px;
+            right: 0;
+            opacity: 0;
+            transition: all 0.2s;
+      }
+      }
+
+      .active {
+        cursor: default;
+        position: relative;
+    
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 5px;
+            background-color: #038c73;
+            bottom: -1px;
+            right: 0;
+            opacity: 1;
+            transition: all 0.2s;
+      }
+       
+      }
   }
+
+  
 
   .tabs__content {
     width: 80%;
@@ -407,12 +451,8 @@ header {
     font: 400 18px/34px Gilroy;
     color: #262626;
 
-    .tabs__pane {
-        display: none;
-      }
+      .tabs__pane {
 
-      .tabs__pane_show {
-        display: block;
         ul {
             li {
                 position: relative;

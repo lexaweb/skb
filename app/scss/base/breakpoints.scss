@@ -9,7 +9,7 @@
  
 
 @include screen("lg", "max") {
-    .inner {
+    .main {
 
         .transfer-form { 
             width: 90%;
@@ -46,18 +46,6 @@
             }
         }
 
-        .block-gray {
-            bottom: -12%;
-        }
-
-
-        .block-gray {
-
-            .image-bortich-and-fat {
-                display: none;
-            }
-        }
-
         .result {
 
             .transfer {
@@ -70,15 +58,23 @@
             }
             
     }
+
+
+
+        form {
+            &:after {
+                display: none;
+            }
+        }
 }
 
 }
 
 @include screen("md", "max") {
 
-    .inner  {
+    .main  {
 
-        .zagolovok {
+        .warning {
             h1 {
                 font: 700 42px/52.45px Gilroy;
             }
@@ -159,31 +155,35 @@
 
 @include screen("sm", "max") {
    
-    header {
-        width: 95%;
-        margin: 15px auto;
-        .logo {
-            a {
-                i {
-                    font-size: 5px;
-                }
-            }
-        }
-        
-        .phone {
-            a {
-                font: 500 22px/30px Gilroy;
+    header { 
 
-                p {
-                    font: 400 11px Gilroy;
+        .inner {
+            width: 95%;
+            margin: 15px auto;
+            .logo {
+                a {
+                    i {
+                        font-size: 5px;
+                    }
+                }
+            }
+            
+            .phone {
+                a {
+                    font: 500 22px/30px Gilroy;
+    
+                    p {
+                        font: 400 11px Gilroy;
+                    }
                 }
             }
         }
+      
     }
 
- .inner {
+ .main {
      margin-bottom: 100px;
-     .zagolovok {
+     .warning {
         width: 85%;
         margin: 35px auto;
 
@@ -330,7 +330,7 @@ footer {
 @include screen("xs", "max") {
 
    .inner {
-       .zagolovok {
+       .warning {
            width: 90%;
        }
 
