@@ -1,0 +1,78 @@
+extends ../layouts/default.pug
+
+block variables
+ -var pageTitle='Перевод с карты на карту'
+
+block content
+    .main
+        .warning
+            h1  Перевод с карты на карту
+            p  Чтобы перевод прошел, у вашей карты должна быть защита 3-D Secure – подтверждение платежей в интернете специальными паролями. Банк присылает их в SMS или назначает один постоянный.
+        form(action="", method="post")
+            .transfer-form
+                .where-from
+                    p Откуда
+                    .card-number
+                        label Номер карты
+                        input#card(type="inf", name="inf", data-mask="0000000000000000")
+                    .period-cvc
+                        .period 
+                            label Срок действия
+                            input(type="inf", name="inf", data-mask="00/00", placeholder="_/_")
+                        .cvc
+                            label CVC2/CVV2
+                                +icon('question-mark', 'svg')
+                            input(type="inf", name="inf", data-mask="000")
+                +icon('arrow', 'svg')
+                .where
+                    p Куда
+                    .card-number
+                        label Номер карты
+                        input(type="inf", name="inf", data-mask="0000000000000000")
+                    .sum
+                        label Сумма перевода
+                        label.rub 
+                            span ₽
+                            input(type="inf", name="inf")
+                        span Комиссия за онлайн-перевод денег будет рассчитана автоматически
+                .result
+                    .information-about-enrollment
+                        h2 Срок зачисления средств
+                        p Моментально на карты СКБ-банка и Газэнергобанка. В течение нескольких минут (в некоторых случаях срок перевода может составлять до нескольких дней) на карты других банков
+                    .transfer
+                        span К списанию, ₽
+                        .offer
+                            input.checkbox(type="checkbox", name="checkbox", id="checkbox") 
+                            label.check(for="checkbox") 
+                            label.text(for="checkbox") Я согласен и принимаю условия оферты 
+                        button.translate(type="submit") Перевести
+    .payment-system
+        .item
+            +icon('payment-system-1', 'svg')
+        .item
+            +icon('payment-system-2', 'svg')
+        .item
+            +icon('payment-system-3', 'svg')
+        .item
+            +icon('payment-system-4', 'svg')
+        .item
+            +icon('payment-system-5', 'svg')
+        .item
+            +icon('payment-system-6', 'svg')
+    .inner
+        .tabs
+            .tabs__nav
+                .tabs__link.active Тарифы
+                .tabs__link Лимиты по переводам
+                .tabs__link Особенности
+            .tabs__content
+                .tabs__pane.active
+                    ul 
+                        li Между картами СКБ-банка и Газэнергобанка, при этом карта отправителя не является кредитной картой* — 0%
+                        li С карты другого банка на карты СКБ-банка и Газэнергобанка — 0%
+                        li С дебетовых карт* СКБ-банка и Газэнергобанка на карту другого банка — 1,5%, но не менее 30 руб.
+                        li Между картами других банков — 1,5%, но не менее 100 руб.
+                .tabs__pane
+                    p Lorem ipsum dolor,
+                .tabs__pane
+                    p Lorem 

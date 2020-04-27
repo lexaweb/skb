@@ -9,6 +9,17 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$icon-header-menu-credits-name: 'icon-header_menu_credits';
+$icon-header-menu-credits-x: 1056px;
+$icon-header-menu-credits-y: 692px;
+$icon-header-menu-credits-offset-x: -1056px;
+$icon-header-menu-credits-offset-y: -692px;
+$icon-header-menu-credits-width: 345px;
+$icon-header-menu-credits-height: 180px;
+$icon-header-menu-credits-total-width: 1752px;
+$icon-header-menu-credits-total-height: 992px;
+$icon-header-menu-credits-image: '../images/sprite.png';
+$icon-header-menu-credits: (1056px, 692px, -1056px, -692px, 345px, 180px, 1752px, 992px, '../images/sprite.png', 'icon-header_menu_credits', );
 $icon-logo-name: 'icon-logo';
 $icon-logo-x: 1056px;
 $icon-logo-y: 0px;
@@ -31,10 +42,21 @@ $icon-loog-full-total-width: 1752px;
 $icon-loog-full-total-height: 992px;
 $icon-loog-full-image: '../images/sprite.png';
 $icon-loog-full: (0px, 0px, 0px, 0px, 1056px, 992px, 1752px, 992px, '../images/sprite.png', 'icon-loog full', );
+$icon-sinara-name: 'icon-sinara';
+$icon-sinara-x: 1401px;
+$icon-sinara-y: 692px;
+$icon-sinara-offset-x: -1401px;
+$icon-sinara-offset-y: -692px;
+$icon-sinara-width: 106px;
+$icon-sinara-height: 17px;
+$icon-sinara-total-width: 1752px;
+$icon-sinara-total-height: 992px;
+$icon-sinara-image: '../images/sprite.png';
+$icon-sinara: (1401px, 692px, -1401px, -692px, 106px, 17px, 1752px, 992px, '../images/sprite.png', 'icon-sinara', );
 $spritesheet-width: 1752px;
 $spritesheet-height: 992px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($icon-logo, $icon-loog-full, );
+$spritesheet-sprites: ($icon-header-menu-credits, $icon-logo, $icon-loog-full, $icon-sinara, );
 $spritesheet: (1752px, 992px, '../images/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables

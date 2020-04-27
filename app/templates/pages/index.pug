@@ -1,78 +1,208 @@
-extends ../layouts/default.pug
+extends ../layouts/default-insurance.pug
 
 block variables
- -var pageTitle='Перевод с карты на карту'
+ -var pageTitle='insurance'
 
 block content
-    .main
-        .warning
-            h1  Перевод с карты на карту
-            p  Чтобы перевод прошел, у вашей карты должна быть защита 3-D Secure – подтверждение платежей в интернете специальными паролями. Банк присылает их в SMS или назначает один постоянный.
-        form(action="", method="post")
-            .transfer-form
-                .where-from
-                    p Откуда
-                    .card-number
-                        label Номер карты
-                        input#card(type="inf", name="inf", data-mask="0000000000000000")
-                    .period-cvc
-                        .period 
-                            label Срок действия
-                            input(type="inf", name="inf", data-mask="00/00", placeholder="_/_")
-                        .cvc
-                            label CVC2/CVV2
-                                +icon('question-mark', 'svg')
-                            input(type="inf", name="inf", data-mask="000")
-                +icon('arrow', 'svg')
-                .where
-                    p Куда
-                    .card-number
-                        label Номер карты
-                        input(type="inf", name="inf", data-mask="0000000000000000")
-                    .sum
-                        label Сумма перевода
-                        label.rub 
-                            span ₽
-                            input(type="inf", name="inf")
-                        span Комиссия за онлайн-перевод денег будет рассчитана автоматически
-                .result
-                    .information-about-enrollment
-                        h2 Срок зачисления средств
-                        p Моментально на карты СКБ-банка и Газэнергобанка. В течение нескольких минут (в некоторых случаях срок перевода может составлять до нескольких дней) на карты других банков
-                    .transfer
-                        span К списанию, ₽
-                        .offer
-                            input.checkbox(type="checkbox", name="checkbox", id="checkbox") 
-                            label.check(for="checkbox") 
-                            label.text(for="checkbox") Я согласен и принимаю условия оферты 
-                        button.translate(type="submit") Перевести
-    .payment-system
-        .item
-            +icon('payment-system-1', 'svg')
-        .item
-            +icon('payment-system-2', 'svg')
-        .item
-            +icon('payment-system-3', 'svg')
-        .item
-            +icon('payment-system-4', 'svg')
-        .item
-            +icon('payment-system-5', 'svg')
-        .item
-            +icon('payment-system-6', 'svg')
-    .inner
-        .tabs
-            .tabs__nav
-                .tabs__link.active Тарифы
-                .tabs__link Лимиты по переводам
-                .tabs__link Особенности
-            .tabs__content
-                .tabs__pane.active
+    header.inner
+        .logo
+            a(href="/")
+                +icon('logo', 'svg')
+        .header-menu
+            .menu-link
+                a(href="/") Кредиты 
+                .dropdown
+                    .inner
+                        .links
+                            h1 Все кредитные продукты
+                            .item-link
+                                a(href="/") Быстрый кредит за 5 минут
+                            .item-link
+                                a(href="/") Кредит пенсионный
+                            .item-link
+                                a(href="/") Кредит на большие суммы
+                            .item-link
+                                a(href="/") Кредит для держателей зарплатных карт
+                        .image
+                            +icon('header_menu_credits', 'png')
+                            h1 До 1,5 млн ₽ на большие цели
+                            p Быстрое решение без похода в офис
+                            a(href="/") Подробнее
+            a(href="/") Карты
+            a(href="/") Вклады
+            a(href="/") Ипотека
+            a(href="/") Платежи
+            a(href="/") Услуги и сервисы
+        .header-inf
+            .phone
+                a(href="/") 8 800  1000  600
+            .office
+                a(href="/") Офисы и банкоматы
+            .location
+                a(href="/") 
+                    +icon('plane', 'svg')
+                    p Санкт-Петеpбуpг
+            .bank
+                a(href="/") интернет-банк
+            .top-helpers-mb
+                .top-helpers-mb-button
+                    span
+                    span
+                    span
+                .top-helpers-mb-wrapper
+    main
+        .inner
+            .menu-internet-bank
+                .bread-crumb
+                    p Частным лицам 
+                    p |
+                    a(href="/") Туристическая медицинская страховка
+                .internet-bank
+                    .dropdown-block Частным лицам
+                        span
+                        .dropdown#dropdown
+                            a(href="/") ЧАСТНЫМ КЛИЕНТАМ
+                            a(href="/") БИЗНЕСУ
+                            a(href="/") О БАНКЕ
+                    a.bank(href="/") интернет-банк
+            .arrange
+                .item
+                    h1 Туристическая медицинская страховка
+                    p Оформите полис за 5 минут в режиме онлайн
+                    button(type="submit") Оформить сейчас
+            .who
+                h1 Кому подойдет туристическая страховка?
+                .signs
+                    .item
+                        +icon('pregnant', 'svg') 
+                        p Беременным женщинам, выезжающим за рубеж
+                    .item
+                        +icon('skier', 'svg') 
+                        p Любителям горнолыжных курортов
+                    .item
+                        +icon('tourist', 'svg') 
+                        p Туристам (от несчастных случаев, утери багажа или отмены поездки)
+            .contract
+                p Страхование через Интернет граждан, выезжающих за рубеж, - это самый удобный и современный способ быстро оформить медицинскую страховку для получения визы и выезда за границу! Договор медицинского страхования туристов, выезжающих за рубеж, - это надежная защита в любой точке мира. Наслаждайтесь отдыхом, а не заботами. 
+            .insurance
+                .tablet
+                    +icon('tablet', 'svg') 
+                .text
+                    h1 Оформить полис просто
+                    ol
+                        li Зайдите на официальный сайт 
+                           a(href="/") АО «АльфаСтрахование»
+                        li Введите параметры в калькулятор и получите расчет страховки
+                        li Оплатите договор в режиме онлайн картой любого российского банка всего за 5 минут.
+                        li Получите полис на электронную почту, указанную при оформлении полиса. 
+                    p Банковские платежи защищены протоколом SSL и сертификатами безопасности, что гарантирует сохранность личных данных.
+            .calculator
+                .item
+                    h1 Воспользуйтесь удобным калькулятором и узнайте:
                     ul 
-                        li Между картами СКБ-банка и Газэнергобанка, при этом карта отправителя не является кредитной картой* — 0%
-                        li С карты другого банка на карты СКБ-банка и Газэнергобанка — 0%
-                        li С дебетовых карт* СКБ-банка и Газэнергобанка на карту другого банка — 1,5%, но не менее 30 руб.
-                        li Между картами других банков — 1,5%, но не менее 100 руб.
-                .tabs__pane
-                    p Lorem ipsum dolor,
-                .tabs__pane
-                    p Lorem 
+                        li 
+                            span Сколько стоит медицинская страховка для поездки за границу?
+                        li 
+                            span Какие виды медицинской страховки существуют и что включает в себя личное страхование туристов?
+                        li 
+                            span Какие документы нужны для страхования выезжающих за границу?
+                    button(type="submit") Оформить сейчас
+            .techsupport
+                +icon('techsupport', 'svg') 
+                .text
+                    p По вопросам технической поддержки Вы можете обратиться в  
+                     a(href="/") АО «АльфаСтрахование»  
+                    p по телефону  
+                     a(href="/") 8-800-333-0999  
+                    p ( круглосуточно, звонок по России бесплатный).
+        .footer
+            .inner
+                .menu
+                    .logo
+                        +icon('logo-footer', 'svg') 
+                    .item-1
+                        a(href="/") О банке
+                        a(href="/") Новости
+                        a(href="/") Акции и бонусы
+                        a(href="/") Пpесс-центp
+                    .item-2
+                        a(href="/") Партнерам
+                        a(href="/") Вакансии
+                        a(href="/") Реквизиты
+                    .item-3
+                        a(href="/") Безопасность
+                        a(href="/") Офисы и банкоматы
+                        a(href="/") Раскрытие информации
+                    .map
+                        a(href="/") Карта сайта
+                .currency
+                    .purchase
+                        span Покупка
+                    .sale
+                        span Продажа
+                    .rf
+                        span ЦБ РФ
+                    .usd
+                        span USD
+                    .eur
+                        span EUR
+                    .purchase-usd-price
+                        span 63,04
+                    .sale-usd-price
+                        span 65,22
+                    .rf-usd-price
+                        span 65,22
+                    .purchase-eur-price
+                        span 63,04
+                    .sale-eur-price
+                        span 65,22
+                    .rf-eur-price
+                        span 65,22
+                    .time
+                        span Действуют с 10:04 МСК 19.09.2019
+                .communication
+                    span Бесплатно по России
+                    a.tel(href="tel:+") 8 800 1000 600
+                    a.feedback(href="/") Обpатная связь
+                    a(href="/")
+                        +icon('holding', 'svg') 
+            .documentation   
+                .item-1
+                    a(href="/") Раскрытие информации профессионального участника рынка ценных бумаг
+                    a(href="/") Раскрытие информации на странице ООО «Интерфакс-ЦРКИ»     
+                .item-2
+                    a(href="/") Список лиц, под контролем либо значительным влиянием которых находится банк
+                    a.inf(href="/") Информация о максимальных процентных ставках по вкладам физических лиц
+                .item-coowner
+                    p.coowner Наш акционеp 
+                        a(href="/")
+                            +icon('sinara', 'png')
+                    p Банковская группа СКБ-банка:
+                    a(href="/") СКБ-банк  
+                    a(href="/") СКБ-финанс  
+                    a(href="/") Газэнергобанк  
+                    a(href="/") SKB LAB 
+        footer
+            .inner
+                .copyright
+                    p © СКБ-банк, 2019 Генеральная лицензия № 705 
+                    p Центрального банка Российской Федерации
+                .social
+                    .fb
+                        a(href="/")
+                            +icon('fb', 'svg')
+                    .vk
+                        a(href="/")
+                            +icon('vk', 'svg')
+                    .inst
+                        a(href="/")
+                            +icon('inst', 'svg')
+                    .ok
+                        a(href="/")
+                            +icon('ok', 'svg')    
+                .apps
+                    .app_store
+                        a(href="/")
+                    .google_play
+                        a(href="/")
+

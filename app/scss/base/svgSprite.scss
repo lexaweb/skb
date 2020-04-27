@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../images/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 24.7em 21.8em;
+    background-size: 71.1em 113.4em;
 }
 
 .no-svg .svg-icon:before {
@@ -26,8 +26,35 @@
 
 
 
-  .svg-icon.svg-logo:before {
+  .svg-icon.svg-fb:before {
       background-position: 0em -1.8em;
+      width: 2.5em;
+      height: 2.5em;
+  }
+
+
+
+
+  .svg-icon.svg-holding:before {
+      background-position: 0em -4.3em;
+      width: 7.1em;
+      height: 7.1em;
+  }
+
+
+
+
+  .svg-icon.svg-inst:before {
+      background-position: 0em -11.4em;
+      width: 2.5em;
+      height: 2.5em;
+  }
+
+
+
+
+  .svg-icon.svg-logo:before {
+      background-position: 0em -13.9em;
       width: 24.7em;
       height: 4em;
   }
@@ -35,8 +62,26 @@
 
 
 
+  .svg-icon.svg-logo-footer:before {
+      background-position: 0em -17.9em;
+      width: 18.4em;
+      height: 2.9em;
+  }
+
+
+
+
+  .svg-icon.svg-ok:before {
+      background-position: 0em -20.8em;
+      width: 2.5em;
+      height: 2.5em;
+  }
+
+
+
+
   .svg-icon.svg-payment-system-1:before {
-      background-position: 0em -5.8em;
+      background-position: 0em -23.3em;
       width: 8.5em;
       height: 2.7em;
   }
@@ -45,7 +90,7 @@
 
 
   .svg-icon.svg-payment-system-2:before {
-      background-position: 0em -8.5em;
+      background-position: 0em -26em;
       width: 5.2em;
       height: 2.7em;
   }
@@ -54,7 +99,7 @@
 
 
   .svg-icon.svg-payment-system-3:before {
-      background-position: 0em -11.2em;
+      background-position: 0em -28.7em;
       width: 5.1em;
       height: 2em;
   }
@@ -63,7 +108,7 @@
 
 
   .svg-icon.svg-payment-system-4:before {
-      background-position: 0em -13.2em;
+      background-position: 0em -30.7em;
       width: 7.1em;
       height: 2.5em;
   }
@@ -72,7 +117,7 @@
 
 
   .svg-icon.svg-payment-system-5:before {
-      background-position: 0em -15.7em;
+      background-position: 0em -33.2em;
       width: 5.6em;
       height: 1.5em;
   }
@@ -81,7 +126,7 @@
 
 
   .svg-icon.svg-payment-system-6:before {
-      background-position: 0em -17.2em;
+      background-position: 0em -34.7em;
       width: 9.7em;
       height: 2.7em;
   }
@@ -89,10 +134,73 @@
 
 
 
+  .svg-icon.svg-plane:before {
+      background-position: 0em -37.4em;
+      width: 1.1em;
+      height: 1.2em;
+  }
+
+
+
+
+  .svg-icon.svg-pregnant:before {
+      background-position: 0em -38.6em;
+      width: 5em;
+      height: 6.8em;
+  }
+
+
+
+
   .svg-icon.svg-question-mark:before {
-      background-position: 0em -19.9em;
+      background-position: 0em -45.4em;
       width: 1.9em;
       height: 1.9em;
+  }
+
+
+
+
+  .svg-icon.svg-skier:before {
+      background-position: 0em -47.3em;
+      width: 6.8em;
+      height: 6em;
+  }
+
+
+
+
+  .svg-icon.svg-tablet:before {
+      background-position: 0em -53.3em;
+      width: 71.1em;
+      height: 44.2em;
+  }
+
+
+
+
+  .svg-icon.svg-techsupport:before {
+      background-position: 0em -97.5em;
+      width: 7.9em;
+      height: 6.4em;
+  }
+
+
+
+
+  .svg-icon.svg-tourist:before {
+      background-position: 0em -103.9em;
+      width: 6.7em;
+      height: 7em;
+  }
+
+
+
+
+  .svg-icon.svg-vk:before {
+      background-position: 0em -110.9em;
+      width: 2.5em;
+      height: 2.5em;
   }
 
 

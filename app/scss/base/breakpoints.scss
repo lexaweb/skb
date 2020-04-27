@@ -8,6 +8,8 @@
 @import "base/default";
  
 
+
+
 @include screen("lg", "max") {
     .main {
 
@@ -394,5 +396,584 @@ footer {
 }
 }
 
+
+// insurance
+
+@include screen("xl", "max") { 
+
+    header.inner {
+        grid-template-columns: .5fr 1fr 0.7fr;
+        width: 95%;
+        .logo {
+            height: 34px;
+
+            a {
+                i {
+                    font-size: 7px;
+                }     
+                
+            }
+        }
+
+        .header-menu {
+            font: 500 14px/28px Gilroy;
+            a {
+                margin-right: 20px;
+            }
+        }
+
+        .header-inf {
+            .phone, .office, .location {
+                font: 500 11px/28px Formular;
+            }
+        }
+    }
+
+    main {
+
+        .inner {
+            .arrange {
+                padding-top: 40px;
+                .item {
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+
+            .who {
+                .signs {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column-gap: 15px;
+                    padding: 0 70px;
+                }
+            }
+
+            .insurance {
+                .tablet {
+                    i {
+                        font-size: 8px;
+                    }
+                }
+                .text {
+                    width: 36%;
+                    h1 {
+                        margin: 0;
+                    }
+
+                    ol {
+                        li {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .footer {
+        .inner {
+            .menu {
+                width: 35%;
+            }
+            .currency {
+                width: 34%;
+            }
+        }
+       
+    }
+
+    footer {
+        .inner {
+            .apps {
+                width: 30%;
+            }
+            .social {
+                width: 20%;
+            }
+        }
+    }
+
+}
+
+@include screen("lg", "max") { 
+    header.inner {
+        grid-template-columns: 1fr 0.7fr;
+        .header-menu {
+            display: none;
+        }
+    }
+
+    main {
+        .inner {
+            .arrange {
+                .item {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            .who {
+                .signs {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column-gap: 15px;
+                    padding: 0 70px;
+                }
+            }
+
+            .insurance {
+                .tablet {
+                    i {
+                        font-size: 5px;
+                    }
+                }
+                .text {
+                    width: 46%;
+                    h1 {
+                        margin: 0;
+                        margin-bottom: 10px;
+                        font: 700 28px Gilroy;
+                    }
+
+                    ol {
+                        li {
+                            margin-bottom: 20px;
+                            font: 400 16px Gilroy;
+                        }
+                    }
+
+                    p {
+                        font: 400 14px Gilroy;
+                    }
+                }
+            }
+
+            .calculator {
+                background-color: #eaebee;
+                height: 100%;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .inner {
+            width: 90%;
+            .menu {
+                width: 35%;
+                grid-column-gap: 10px;
+                .logo {            
+                    align-self: flex-end;
+                    i {
+                        font-size: 8px;
+                    }
+                }
+            }
+            .currency {
+                width: 41%;
+            }
+        }
+       
+    }
+   
+}
+
+@include screen("md", "max") { 
+
+
+        header.inner {
+            .header-inf {
+                justify-content: flex-end;
+                .bank {
+                    display: block;
+                    font: 500 13px/1.2 Gilroy;
+                }
+                .phone {
+                    display: none;
+                }
+                .office {
+                    display: none;
+                }
+                .location {
+                    display: none;
+                }
+            }
+        }
+    
+
+    .internet-bank {
+        display: none;
+    }
+
+    main {
+        .inner {
+            .who {
+                .signs {
+                    padding: 0 40px;
+    
+                    .item {
+                        font: 400 14px Gilroy;
+                        margin: 50px 0;
+                        i {
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+
+            .insurance {
+                width: 100%;
+                flex-wrap: wrap;
+                .tablet {
+                    i {
+                        font-size: 3px;
+                    }
+                }
+                .text {
+                    width: 80%;
+                }
+            }
+            
+            
+        }
+    }
+
+    .footer {
+        .inner {
+            .menu {
+                width: 41%;
+                .logo {            
+                    margin-bottom: 15px;
+                    i {
+                        font-size: 8px;
+                    }
+                }
+            }
+            .currency {
+                width: 56%;
+                margin-top: 45px;
+            }
+            .communication {
+                width: 25%;
+                margin-top: 45px;
+            }
+        }
+       
+        
+
+        .documentation {
+            width: 90%;
+            .item-1 {
+                width: 29%;
+            }
+            .item-2 {
+                width: 29%;
+            }
+            .item-coowner {
+                width: 31%;
+            }
+            
+        }
+    }
+
+    footer {
+        .inner {
+            flex-wrap: wrap;
+            width: 90%;
+            .copyright {
+                width: 30%;
+            }
+            .apps {
+                width: 39%;
+            }
+            .social {
+                width: 25%;
+            }
+        }
+    }
+
+}
+
+@include screen("sm", "max") { 
+    main {
+        .inner {
+            margin-bottom: 0;
+            .arrange {
+                .item {
+                   h1 {
+                    font: 700 40px/52.45px Gilroy;
+                   }
+                   p {
+                    font: 400 18px Gilroy;
+                   }
+                   button {
+                    font: 400 15px/50px Gilroy;
+                    margin: 20px 0;
+                   }
+                }
+            }
+
+            .who {
+                width: 90%;
+                margin-top: 32px;
+                h1 {
+                    font: 700 28px/55.89px Gilroy;
+                }
+
+                .signs {
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap: 10px;
+                    padding: 0 30px;
+                    .item {
+                        font: 400 14px Gilroy;
+                        margin: 15px 0;
+
+                        p {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            .contract {
+                width: 90%;
+                margin: 30px auto;
+                font: 400 15px/25px Gilroy;
+            }
+
+            .insurance {
+                width: 95%;
+                flex-wrap: wrap;
+                .tablet {
+                    i {
+                        font-size: 3px;
+                    }
+                }
+                .text {
+                    width: 100%;
+                    h1 {
+                        margin: 20px 0;
+                    }
+                }
+            }
+
+            .calculator {
+                width: 95%;
+                margin: 40px auto;
+                &:before {
+                    display: none;
+                }
+
+                .item {
+                    margin: 0 40px;
+                    padding: 0;
+                    h1 {
+                        font: 700 25px/41.89px Gilroy;
+                        padding-top: 15px;
+
+                    }
+                    ul {
+                        font: 400 14px Gilroy;
+                    }
+                    button {
+                        margin: 20px 0;
+                        font: 400 14px/45px Gilroy;
+                        padding: 0 30px;
+                    }
+                }
+            }
+
+            .techsupport {
+                width: 95%;
+                margin: 0px auto;
+                font: 400 14px Gilroy;
+                i {
+                    font-size: 7px;
+                }
+                .text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .inner {
+            .menu {
+                width: 100%;
+                
+            }
+            .currency {
+                width: 100%;
+                margin-top: 45px;
+            }
+            .communication {
+                width: 100%;
+                margin-top: 45px;
+            }
+
+            
+        }
+
+        .documentation {
+            .item-1 {
+                width: 50%;
+            }
+            .item-2 {
+                width: 50%;
+            }
+            .item-coowner {
+                margin-top: 30px;
+                .coowner {
+                    margin-bottom: 5px;
+                }
+            }
+            
+        }
+       
+    }
+
+    footer {
+        height: 100%;
+        .inner {
+            .copyright {
+                width: 100%;        
+                margin: 15px 0;
+            }
+            .apps {           
+                margin: 15px 0;
+                width: 65%;
+            }
+            .social {       
+                margin: 15px 0;
+                width: 60%;
+            }
+        }
+    }
+}
+
+@include screen("xs", "max") { 
+
+    main {
+        .inner {
+            margin: 40px auto;
+            margin-bottom: 0;
+            .menu-internet-bank {
+                .bread-crumb {
+                    font: 400 13px Gilroy;
+
+                    p {
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        margin-left: 5px;
+                    }
+                }
+                
+            }
+
+            .who {
+                width: 100%;
+                margin-top: 25px;
+                h1 {
+                    font: 700 25px/45.89px Gilroy;
+                }
+
+                .signs {
+                    grid-template-columns: 1fr;
+                    .item {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+ 
+    }
+
+    .footer {
+        margin-bottom: -40px;
+        .inner {
+            .menu {
+                font: 300 12px/23px Gilroy;
+                
+            }
+            .currency {
+                margin-top: 25px;
+                .sale, .purchase, .rf {
+                    font: 300 12px/22px Gilroy;
+                }
+                .usd, .eur {
+                    font: 300 20px/24.49px Gilroy;
+                }
+                .purchase-usd-price, .sale-usd-price, .rf-usd-price, .purchase-eur-price, .sale-eur-price, .rf-eur-price {
+                    font: 300 14px/24.49px Gilroy;
+                }
+                .time {
+                    font: 300 12px/22px Gilroy;
+                }
+            }
+            .communication {
+                margin-top: 25px;
+                span {
+                    font: 300 12px/18px Gilroy;
+                }
+                .tel {
+                    font: 300 22px/24px Gilroy;
+                }
+                .feedback {
+                    font: 300 12px/22px Gilroy;
+                }
+            }
+        }
+
+        .documentation {
+            margin: 20px auto;
+            .item-1 {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .item-2 {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .item-coowner {
+                margin-top: 20px;
+                width: 100%;
+                .coowner {
+                    margin-bottom: 5px;
+                }
+            }
+            
+        }
+       
+    }
+
+    footer {
+        height: 100%;
+        .inner {
+            .copyright {
+                width: 100%;        
+                margin: 15px 0;
+            }
+            .apps {           
+                margin: 15px 0;
+                width: 70%;
+            }
+            .social {       
+                margin: 15px 0;
+                width: 80%;
+            }
+        }
+    }
+   
+}
 
 @import "base/mixins";
